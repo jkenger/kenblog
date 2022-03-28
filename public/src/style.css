@@ -21,8 +21,6 @@ body{
 }
 
 
-
-
 .left-side{
     @apply p-20 text-xl text-justify;
 }

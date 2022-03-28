@@ -19,7 +19,7 @@
             <label class="title text-[2rem]"><span class="name text-[2.5rem]">KEN</span> + GERVACIO</label>
             <nav class="pt-5 pb-2">
                 <ul class="flex gap-4">
-                    <li><a href="/views/blog.html">HOME</a>
+                    <li><a href="/views/index.html">HOME</a>
                     <li><a href="/views/theblog.html">THE BLOG</a>
                     <li><a href="#">ABOUT</a>
                     <li><a href="#">CONTACT</a>
@@ -35,8 +35,8 @@
     <main class=" border-y-[1px]  border-secondary-100">
         <div class="container items-center justify-center">
             <section>
-                <div class="grid grid-cols-2">
-                    <div class="left-side">
+                <div class="flex flex-col md:grid grid-cols-2">
+                    <div class="left-side order-1 md:order-none">
                         <h1 class="q border-l-2 pl-4">
                             &nbsp; &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur <span class="highlight">adipisicing elit.</span>
                             Obcaecati aut tempora harum soluta nihil! Ipsum omnis quibusdam aut similique perferendis.
@@ -48,9 +48,9 @@
                             <a href="#">ABOUT</a>
                         </div>
                     </div>
-                    <div class="right-side ">
-                        <div class="flex items-center justify-center p-[5em]">
-                            <img src="./../public/img/bg.jpg" class=" rounded-full">
+                    <div class="right-side">
+                        <div class="flex items-center justify-center sm:p-[2.5em] md:p-[5em]">
+                            <img src="./../public/img/bg.jpg" class=" w-[240px] rounded-full">
                         </div>
                     </div>
                 </div>
