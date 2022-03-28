@@ -17,7 +17,7 @@ body{
 }
 
 .container{
-    @apply flex flex-col w-[1020px] m-auto mb-10;
+    @apply flex flex-col w-[1020px] m-auto my-5;
 }
 
 
@@ -66,8 +66,8 @@ a {
 }
 
 /* links */
-.links{
-    @apply flex gap-5
+.interactives{
+    @apply flex
 }
 
 
@@ -75,5 +75,19 @@ a {
 
 #button{
     @apply border-[1px] bg-primary-200 px-5 rounded hover:bg-primary-100
+}
+
+/* asds */
+
+form > textarea, form > input{
+    margin-bottom: 20px;
+}
+
+textarea, input{
+    padding: .25em .5em;
+}
+
+textarea:focus, input:focus{
+    border: none;
 }
 

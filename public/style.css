@@ -576,6 +576,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(187 191 202 / var(--tw-border-opacity));
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-\[5em\] {
   padding: 5em;
 }
@@ -623,6 +627,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
+.text-\[1rem\] {
+  font-size: 1rem;
+}
+
 .text-\[1\.5rem\] {
   font-size: 1.5rem;
 }
@@ -635,6 +643,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-primary-100 {
@@ -668,7 +681,8 @@ body {
 
 .container {
   margin: auto;
-  margin-bottom: 2.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
   display: flex;
   width: 1020px;
   flex-direction: column;
@@ -746,9 +760,8 @@ a:hover {
 
 /* links */
 
-.links {
+.interactives {
   display: flex;
-  gap: 1.25rem;
 }
 
 /* button */
@@ -767,9 +780,18 @@ a:hover {
   background-color: rgb(244 244 242 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-primary-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(232 232 232 / var(--tw-bg-opacity));
+/* asds */
+
+form > textarea, form > input{
+  margin-bottom: 20px;
+}
+
+textarea, input{
+  padding: .25em .5em;
+}
+
+textarea:focus, input:focus{
+  border: none;
 }
 
 @media (min-width: 640px) {
