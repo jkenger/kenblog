@@ -1,0 +1,32 @@
+<%-include('./partials/nav')%>
+<main class=" border-y-[1px]  border-secondary-100">
+    <div class="container items-start">
+        <section>
+            <label class=" text-3xl">
+                Create Blog
+            </label>
+            <!-- BLOG HERE -->
+            <div class="container">
+                <form class="flex flex-col" method="POST" action="/theblog/addblog">
+                    <label>First Name:</label>
+                    <input type="text" placeholder="First Name" name="first_name" required="required">
+
+                    <label>Last Name:</label>
+                    <input type="text" placeholder="Last name" name="last_name" required="required">
+
+                    <label>Title: </label>
+                    <input type="text" placeholder="Title" name="title" required="required">
+                    
+                    <label>Description:</label>
+                    <textarea name="description" id="" cols="30" rows="2""></textarea>
+
+                    <label>Blog:</label>
+                    <textarea name="blog" id="" cols="30" rows="10"></textarea>
+
+                    <button id="button" class="p-3" type="submit"> Submit </button>
+
+                </form>
+            </div>
+    </div>
+</main>
+<%-include('./partials/footer')%> 

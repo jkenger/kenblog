@@ -1,0 +1,22 @@
+<%-include('./partials/nav')%>
+<main class=" border-y-[1px]  border-secondary-100">
+    <div class="container items-start">
+        <section>
+            <label class=" text-3xl">
+                Contact
+            </label>
+            <!-- BLOG HERE -->
+            <div class="container">
+                <form class="flex flex-col">
+                    <label>First Name:</label>
+                    <input type="text" placeholder="Name" name="name" required="required">
+                    <label>Email:</label>
+                    <input type="text" placeholder="@Email" name="email" required="required">
+                    <label>Comment:</label>
+                    <textarea name="blog" id="" cols="30" rows="10"></textarea>
+                    <button id="button" class="p-3" type="submit">Submit</button>
+                </form>
+            </div>
+    </div>
+</main>
+<%-include('./partials/footer')%> 
