@@ -11,7 +11,8 @@ exports.TheBlog = (req, res)=>{
 }
 
 exports.Blog = (req, res)=>{
-    res.status(200).render('blog')
+    axios.get(`http://localhost:3000/theblog/${req.params.id}`)
+    .then(data=> res.render('blog', {blogs: data.data}))   
 }
 
 exports.AddBlog = (req, res)=>{
