@@ -1,0 +1,27 @@
+
+<%blogs.forEach(blog=>{%>
+    <div class="card">
+        <div class="gallery">
+            <img src="img/me.jpg" alt="">
+        </div>
+
+        <div class="text-primary-100 p-8">
+            <div class="flex flex-col justify-between" style="height: 35vh">
+                <div class="flex justify-between text-sm">
+                    <div class="flex flex-col">
+                        <label><%=blog.first_name%>, <%=blog.last_name%></label>
+                        <label>2 days ago · 3 min</label>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap text-2xl">
+                    <h1><a href="/blog?id=<%=blog._id%>"> <%=blog.title%> </a></h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<%})%>

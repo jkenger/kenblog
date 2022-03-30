@@ -10,14 +10,23 @@ exports.CreateBlog = (req, res)=>{
         last_name: req.body.last_name,
         title: req.body.title,
         description: req.body.description,
-        blog: req.body.blog,
+        blog: req.body.blog
     })
 
     blog.save('blog')
     .then(data=>{
-        res.redirect('/')
+        res.redirect('/theblog')
     })
     .catch(err=>{
         console.log('cannot fetch data')
+    })
+}
+
+exports.ShowBlogs = (req, res)=>{
+    blogSchema.find()
+    .then(data=>{
+        res.send(data)
+    }).catch(err => {
+        res.status(500).send({ message: err.message || "cannot find users" })
     })
 }

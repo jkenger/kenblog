@@ -17,5 +17,6 @@ router.get('/contact', services.Contact)
 
 // Controller
 router.post('/theblog/addblog', controller.CreateBlog)
+router.get('/theblog/blogs', controller.ShowBlogs)
 
 module.exports = router

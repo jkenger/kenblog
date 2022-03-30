@@ -1,62 +1,40 @@
 <%-include('./partials/nav')%>
 
-<main class=" border-y-[1px]  border-secondary-100">
-    <div class="container items-start">
-        <section>
+    <main class=" border-y-[1px]  border-secondary-100">
+        <div class="container items-center">
+            <section>
 
-            <div class="flex gap-5 py-5 mb-5 justify-between">
-                <ul class="flex">
-                    <li>
-                        <a href="#">All posts</a>
-                    </li>
-                    <li>
-                        <a href="#">Gaming</a>
-                    </li>
-                    <li>
-                        <a href="#">Web Dev</a>
-                    </li>
-                    <li>
-                        <a href="#">Blockchain</a>
-                    </li>
-                </ul>
+                <div class="flex gap-5 py-5 mb-5 justify-between">
+                    <ul class="flex">
+                        <li>
+                            <a href="#">All posts</a>
+                        </li>
+                        <li>
+                            <a href="#">Gaming</a>
+                        </li>
+                        <li>
+                            <a href="#">Web Dev</a>
+                        </li>
+                        <li>
+                            <a href="#">Blockchain</a>
+                        </li>
+                    </ul>
 
-                <div class="">
-                    <a href="/theblog/addblog" id="button">+ Add blog</a>
+                    <div class="">
+                        <a href="/theblog/addblog" id="button">+ Add blog</a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- CARDS HERE -->
-            <div class="grid grid-cols-2 sm:grid-cols-2 gap-10 md:grid-cols-3">
-
-                <div class="card">
-                    <div class="gallery">
-                        <img src="img/me.jpg" alt="">
-                    </div>
-
-                    <div class="text-primary-100 p-8">
-                        <div class="flex flex-col justify-between" style="height: 35vh">
-                            <div class="flex justify-between text-sm">
-                                <div class="flex flex-col">
-                                    <label>kengervacio</label>
-                                    <label>2 days ago · 3 min</label>
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-wrap text-2xl">
-                                <h1><a href="/blog"> New Year 2022 Celebration and Happenings </a></h1>
-                            </div>
-                        </div>
-                    </div>
-
+                <!-- CARDS HERE -->
+                <div class="grid grid-cols-2 sm:grid-cols-2 gap-10 md:grid-cols-3 mb-5">
+                    <%-include('./partials/show_blog_card') %> 
+                   
                 </div>
 
                 <!-- CARDS END HERE -->
 
-        </section>
-    </div>
-</main>
+            </section>
+        </div>
+    </main>
 
-<%-include('./partials/footer')%>
+    <%-include('./partials/footer')%>

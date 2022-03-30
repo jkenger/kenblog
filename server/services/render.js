@@ -1,3 +1,4 @@
+const axios = require('axios')
 const express = require('express')
 
 exports.Home = (req, res)=>{
@@ -5,7 +6,8 @@ exports.Home = (req, res)=>{
 }
 
 exports.TheBlog = (req, res)=>{
-    res.status(200).render('theblog')
+    axios.get('http://localhost:3000/theblog/blogs')
+    .then(data=> res.status(200).render('theblog', {blogs: data.data}))
 }
 
 exports.Blog = (req, res)=>{
