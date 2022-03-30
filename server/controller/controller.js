@@ -1,4 +1,5 @@
 
+const { send } = require('express/lib/response')
 const blogSchema = require('./../model/schema')
 
 exports.CreateBlog = (req, res)=>{
@@ -27,6 +28,16 @@ exports.ShowBlogs = (req, res)=>{
     .then(data=>{
         res.send(data)
     }).catch(err => {
-        res.status(500).send({ message: err.message || "cannot find users" })
+        res.status(500).send({ message: err.message || "cannot find blogs" })
     })
+}
+
+exports.ShowBlogContent = (req, res)=>{
+    if(req.params.id){
+        const id = req.params.id
+        blogSchema.findById(id)
+        .then(data=>{
+            res.send(data)
+        })
+    }
 }
