@@ -20,6 +20,10 @@ var schema = new mongoose.Schema({
     blog: {
         type: String,
         required: true
+    },
+    genre:{
+        type:String,
+        required: true
     }
 })
 

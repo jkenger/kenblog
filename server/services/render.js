@@ -1,28 +1,35 @@
 const axios = require('axios')
 const express = require('express')
 
-exports.Home = (req, res)=>{
+
+// FETCH AND RENDER DATA FROM API
+exports.Home = (req, res) => {
     res.status(200).render('index')
 }
 
-exports.TheBlog = (req, res)=>{
-    axios.get('http://localhost:3000/theblog/blogs')
-    .then(data=> res.status(200).render('theblog', {blogs: data.data}))
+exports.TheBlog = (req, res) => {
+    console.log(req)
+
+    axios.get(`http://localhost:3000/theblog/blogs?filter=${req.query.filter || "allpost"}`)
+        .then(data => res.status(200).render('theblog', { blogs: data.data }))
+
+
+
 }
 
-exports.Blog = (req, res)=>{
+exports.Blog = (req, res) => {
     axios.get(`http://localhost:3000/theblog/${req.params.id}`)
-    .then(data=> res.render('blog', {blogs: data.data}))   
+        .then(data => res.render('blog', { blogs: data.data }))
 }
 
-exports.AddBlog = (req, res)=>{
-    res.status(200).render('create_blog')    
+exports.AddBlog = (req, res) => {
+    res.status(200).render('create_blog')
 }
 
-exports.About = (req, res)=>{
+exports.About = (req, res) => {
     res.status(200).render('about')
 }
 
-exports.Contact = (req, res)=>{
+exports.Contact = (req, res) => {
     res.status(200).render('contact')
 }

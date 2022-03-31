@@ -1,8 +1,9 @@
-
-<%blogs.forEach(blog=>{%>
+<%const img = ['3.jpg', 'me.jpg', 'minah2.jpg']%>
+<!-- check if variable is array -->
+<%blogs.forEach((blog, i)=>{%>
     <div class="card">
         <div class="gallery">
-            <img src="img/me.jpg" alt="">
+            <img src="/img/<%=img[i%img.length]%>" alt="">
         </div>
 
         <div class="text-primary-100 p-8">
