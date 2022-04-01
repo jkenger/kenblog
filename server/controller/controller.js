@@ -52,6 +52,15 @@ exports.ShowBlogs = (req, res) => {
             res.status(500).send({ message: err.message || "cannot find blogs" })
         })
     }
+
+    if(req.query.filter === 'blockchain'){
+        blogSchema.find({genre: 'Blockchain'})
+        .then(data => {
+            res.send(data)
+        }).catch(err => {
+            res.status(500).send({ message: err.message || "cannot find blogs" })
+        })
+    }
     
     console.log(req.query.filter)
 }
