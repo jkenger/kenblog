@@ -65,3 +65,16 @@ exports.ShowBlogContent = (req, res) => {
             })
     }
 }
+
+
+// UPDATE BY ID
+
+exports.Update = (req, res)=>{
+    const id = req.params.id
+    const {first_name, last_name, title, description, blog} = req.body
+    blogSchema.findByIdAndUpdate(id, req.body)
+    .then(data=>{
+        res.redirect('/theblog')
+        console.log('updated')
+    })
+}

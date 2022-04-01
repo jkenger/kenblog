@@ -39,6 +39,7 @@
     <script>
         var myLink = document.querySelector('ul.links')
         myLink.addEventListener('click', (e) => {
+            e.preventDefault()
             window.location.href = `http://localhost:3000/theblog/?filter=${e.target.textContent.replace(/ +/g, "").toLowerCase()}`
         })
     </script>
