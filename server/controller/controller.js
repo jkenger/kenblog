@@ -61,8 +61,6 @@ exports.ShowBlogs = (req, res) => {
             res.status(500).send({ message: err.message || "cannot find blogs" })
         })
     }
-    
-    console.log(req.query.filter)
 }
 
 exports.ShowBlogContent = (req, res) => {
@@ -84,7 +82,6 @@ exports.Update = (req, res)=>{
     blogSchema.findByIdAndUpdate(id, req.body)
     .then(data=>{
         res.redirect('/theblog')
-        console.log('updated')
     })
 }
 

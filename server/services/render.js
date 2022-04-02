@@ -12,7 +12,6 @@ exports.Home = (req, res) => {
 
 //  RENDER BLOGS
 exports.TheBlog = (req, res) => {
-    console.log(req)
 
     axios.get(`http://localhost:3000/theblog/blogs?filter=${req.query.filter || "allpost"}`)
         .then(data => res.status(200).render('theblog', { blogs: data.data }))
