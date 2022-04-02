@@ -1,5 +1,6 @@
 <%const img = ['3.jpg', 'me.jpg', 'minah2.jpg']%>
 <!-- check if variable is array -->
+<% if(!blogs.length < 1){ %> 
 <%blogs.forEach((blog, i)=>{%>
     <div class="card">
         <div class="gallery">
@@ -26,3 +27,8 @@
 
     </div>
 <%})%>
+<% }else{%>
+
+<h1 class="text-2xl" style="margin: 5em auto">NO MORE BLOGS FOUND</h1>
+
+<% }%>
