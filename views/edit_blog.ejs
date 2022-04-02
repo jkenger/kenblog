@@ -7,7 +7,7 @@
             </label>
             <!-- BLOG HERE -->
             <div class="container">
-                <form class="flex flex-col" method="POST" action="/theblog/<%=blogs._id%>">
+                <form class="flex flex-col" method="POST" action="/theblog/blogs/<%=blogs._id%>">
                     <input type="text"name="id" required="required" hidden value="<%=blogs._id%>">
                     <label>First Name:</label>
                     <input type="text" placeholder="First Name" name="first_name" required="required" value="<%=blogs.first_name%>">

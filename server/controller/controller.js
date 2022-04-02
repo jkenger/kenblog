@@ -87,3 +87,12 @@ exports.Update = (req, res)=>{
         console.log('updated')
     })
 }
+
+// DELETE BY ID
+exports.Delete = (req, res)=>{
+    const id = req.params.id
+    blogSchema.findByIdAndDelete(id)
+    .then(data=>{
+        res.json({redirect:'/theblog'})
+    })
+}

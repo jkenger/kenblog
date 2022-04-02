@@ -12,9 +12,9 @@
         <div class="flex items-center gap-5">
             <div>
                 <a href="/theblog/blogs/<%=blogs._id%>/editblog" id="button">Edit Blog</a>
-                <a href="#" id="button">Delete Blog</a>
+                <a class="delete-btn" data-doc="<%=blogs._id%>" cursor="pointer" id="button">Delete Blog</a>
             </div>
-            
+
             <div>
                 <a href="#">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -40,3 +40,32 @@
     </div>
 
 </div>
+
+<script>
+    var aElems = document.querySelectorAll('.delete-btn');
+
+    for (var i = 0, len = aElems.length; i < len; i++) {
+        aElems[i].onclick = function () {
+            var check = confirm("Are you sure you want to delete?");
+            if (check == true) {
+                const deleteBtn = document.querySelector('.delete-btn')
+                deleteBtn.addEventListener('click', e => {
+                fetch(`/theblog/blogs/${deleteBtn.dataset.doc}`,
+                    {
+                        method: 'DELETE'
+                    })
+                    .then(response => response.json()
+                        .then(data => {
+                            window.location.href = data.redirect
+                        }))
+
+            })
+            return true;
+                return true;
+            }
+            else {
+                return false;
+            }
+        };
+    }
+</script>

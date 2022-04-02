@@ -23,8 +23,9 @@ router.get('/contact', services.Contact)
 router.get('/theblog/blogs', controller.ShowBlogs)
 router.get('/theblog/:id', controller.ShowBlogContent)
 
-// CRUD
-router.post('/theblog/:id', controller.Update)
+// OPERATIONS
+router.post('/theblog/blogs/:id', controller.Update)
+router.delete('/theblog/blogs/:id', controller.Delete)
 router.post('/theblog/addblog', controller.CreateBlog)
 
 module.exports = router
