@@ -578,10 +578,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.25rem;
 }
 
-.self-center {
-  align-self: center;
-}
-
 .rounded-full {
   border-radius: 9999px;
 }
@@ -632,10 +628,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pl-4 {
   padding-left: 1rem;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .text-justify {
@@ -804,6 +796,12 @@ a:hover {
 
 .interactives {
   display: flex;
+}
+
+.active {
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(73 84 100 / var(--tw-border-opacity));
 }
 
 /* button */

@@ -69,6 +69,10 @@ a {
     @apply flex
 }
 
+.active{
+    @apply border-b-2 border-secondary-200
+}
+
 
 /* button */
 

@@ -20,10 +20,10 @@
             <label class="title text-[2rem]"><span class="name text-[2.5rem]">KEN</span> + GERVACIO</label>
             <nav class="pt-5 pb-2">
                 <ul class="flex gap-4">
-                    <li><a href="/">HOME</a>
-                    <li><a href="/theblog">THE BLOG</a>
-                    <li><a href="/about">ABOUT</a>
-                    <li><a href="/contact">CONTACT</a>
+                    <li><a href="/" class="<%=(url === '/' ? "active" : "")%>">HOME</a>
+                    <li><a href="/theblog" class="<%=(url.includes('/theblog')? "active" : "")%>">THE BLOG</a>
+                    <li><a href="/about" class="<%=(url === '/about' ? "active" : "")%>">ABOUT</a>
+                    <li><a href="/contact" class="<%=(url === '/contact' ? "active" : "")%>">CONTACT</a>
                 </ul>
             </nav>
         </div>
